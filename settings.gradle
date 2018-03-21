@@ -1,1 +1,1 @@
-include ':app', ':qrcameralib', ':mylibrary'
+include ':app', ':qrcameralib'

@@ -25,5 +25,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btnMulti = (Button)findViewById(R.id.buttonMulti);
+
+//        btnMulti.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent() ;
+//                intent.setClass(MainActivity.this, MultiActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

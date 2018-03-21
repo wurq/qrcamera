@@ -55,12 +55,14 @@ import com.wcamera.qr.core.ResultMetadataType;
 import com.wcamera.qr.core.ResultPoint;
 import com.wcamera.qr.qrcamera.camera.CameraManager;
 import com.wcamera.qr.qrcamera.clipboard.ClipboardInterface;
+import com.wcamera.qr.qrcamera.history.HistoryActivity;
 import com.wcamera.qr.qrcamera.history.HistoryItem;
 import com.wcamera.qr.qrcamera.history.HistoryManager;
 import com.wcamera.qr.qrcamera.result.ResultButtonListener;
 import com.wcamera.qr.qrcamera.result.ResultHandler;
 import com.wcamera.qr.qrcamera.result.ResultHandlerFactory;
 import com.wcamera.qr.qrcamera.result.supplement.SupplementalInfoRetriever;
+import com.wcamera.qr.qrcamera.share.ShareActivity;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -361,24 +363,24 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     Intent intent = new Intent(Intent.ACTION_VIEW);
     intent.addFlags(Intents.FLAG_NEW_DOC);
     switch (item.getItemId()) {
-//      case R.id.menu_share:
-//        intent.setClassName(this, ShareActivity.class.getName());
-//        startActivity(intent);
-//        break;
-//      case R.id.menu_history:
-//        intent.setClassName(this, HistoryActivity.class.getName());
-//        startActivityForResult(intent, HISTORY_REQUEST_CODE);
-//        break;
-//      case R.id.menu_settings:
-//        intent.setClassName(this, PreferencesActivity.class.getName());
-//        startActivity(intent);
-//        break;
-//      case R.id.menu_help:
-//        intent.setClassName(this, HelpActivity.class.getName());
-//        startActivity(intent);
-//        break;
-//      default:
-//        return super.onOptionsItemSelected(item);
+      case R.id.menu_share:
+        intent.setClassName(this, ShareActivity.class.getName());
+        startActivity(intent);
+        break;
+      case R.id.menu_history:
+        intent.setClassName(this, HistoryActivity.class.getName());
+        startActivityForResult(intent, HISTORY_REQUEST_CODE);
+        break;
+      case R.id.menu_settings:
+        intent.setClassName(this, PreferencesActivity.class.getName());
+        startActivity(intent);
+        break;
+      case R.id.menu_help:
+        intent.setClassName(this, HelpActivity.class.getName());
+        startActivity(intent);
+        break;
+      default:
+        return super.onOptionsItemSelected(item);
     }
     return true;
   }
